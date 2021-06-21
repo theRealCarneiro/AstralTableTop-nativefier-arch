@@ -35,7 +35,7 @@ package() {
   install -dm755 "${pkgdir}/"{opt,usr/{bin,share/{applications,licenses/${pkgname}}}}
 
   _folder="${_pkgname}-linux-x64"
-  _binary="${srcdir}/${_folder}/${_pkgname}"
+  _binary="/opt/${pkgname}/${_pkgname}"
 
   cp -rL "${srcdir}/${_folder}" "${pkgdir}/opt/${pkgname}"
   ln -s "${_binary}" "${pkgdir}/usr/bin/${pkgname}"
